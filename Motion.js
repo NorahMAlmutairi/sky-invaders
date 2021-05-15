@@ -1,4 +1,4 @@
-class Motion {
+class Motion extends Shape {
 
     move(direction) {
     }
