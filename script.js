@@ -16,20 +16,8 @@ window.setInterval(() => {
 }, 100);
 
 let blocks = document.getElementsByClassName("block");
-for(let i=0; i < blocks.length; i++){
+for (let i = 0; i < blocks.length; i++) {
     blocks[i].style.left = Math.floor((Math.random() * 300)) + "px";
-    blocks[i].style.top = Math.floor((Math.random() * (600-40-100))) + "px";
-    
+    blocks[i].style.top = Math.floor((Math.random() * (600 - 40 - 100))) + "px";
+
 }
-
-
-
-
-
-
-
-
-    
-
-  
-
