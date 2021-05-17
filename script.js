@@ -1,42 +1,36 @@
-// let y = 0;
-// let enemies = document.getElementsByClassName("enemy")
-// for (let i = 0; i < enemies.length; i++) {
-//     enemies[i].style.left = Math.floor((Math.random() * 330)) + "px";
-//     enemies[i].style.top = y + "px"
-//     y = y - 150
-// }
-
-
-// window.setInterval(() => {
-//     for (let i = 0; i < enemies.length; i++)
-//         if (parseInt(enemies[i].style.top) >= 550)
-//             enemies[i].style.top = "0px"
-//         else
-//             enemies[i].style.top = (parseInt(enemies[i].style.top) + 10) + "px"
-// }, 100);
-
-// let blocks = document.getElementsByClassName("block");
-// for (let i = 0; i < blocks.length; i++) {
-//     blocks[i].style.left = Math.floor((Math.random() * 300)) + "px";
-//     blocks[i].style.top = Math.floor((Math.random() * (600 - 40 - 100))) + "px";
-
-// }
-
-
-// let enemiesObjects = []
-// for (let i = 0; i < enemies.length; i++) {
-//     let htmlEnemy = enemies[i]
-//     let objectEnemy = new Enemy();
-//     objectEnemy.element = htmlEnemy;
-// }
-
-
+let canvas = document.getElementById("gameBoard")
+let context = canvas.getContext('2d');
+canvas.width = innerWidth - 10
+canvas.height = innerHeight - 20
 let player = new Player()
+let shots = []
+function drawAll() {
+    context.clearRect(0, 0, 9999, 9999);
+    draw(player)
+    shots.forEach(shot => draw(shot))
+    requestAnimationFrame(drawAll)
+}
+
+function draw(shape) {
+    context.beginPath();
+    context.rect(shape.x, shape.y, shape.width, shape.height)
+    context.fill();
+
+}
+
+setInterval(() => shots.forEach(shot => shot.move("up")), 10);
+
+
+requestAnimationFrame(drawAll)
 
 document.addEventListener("keydown", e => {
     if (e.keyCode == 37) {// left
         player.move("left")
     } else if (e.keyCode == 39) { // right
         player.move("right")
+    } else if (e.keyCode == 13) {// enter
+        shots.push(player.shoot())
     }
 })
+
+
