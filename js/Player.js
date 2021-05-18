@@ -6,7 +6,7 @@ class Player extends Motion {
         this.height = 60;
         this.y = canvas.height - this.height
         this.color = "white"
-        this.img = Images.Player
+        this.img = assets.Player
     }
 
     shoot() {

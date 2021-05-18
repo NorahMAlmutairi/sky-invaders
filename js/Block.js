@@ -7,6 +7,6 @@ class Block extends Motion {
         this.x = Math.max((this.width * 2), Math.random() * canvas.width - (this.width * 4))
         this.y = Math.max((this.height * 2), Math.random() * canvas.height - (this.height * 4))
         this.color = "grey"
-        this.img = Images.Block
+        this.img = assets.Block
     }
 }

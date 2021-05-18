@@ -4,7 +4,7 @@ let context = canvas.getContext('2d');
 canvas.width = innerWidth / 2 - 10
 canvas.height = innerHeight - 20
 
-const Images = {
+const assets = {
     Enemy: new Image,
     Player: new Image,
     LazerUp: new Image,
@@ -15,14 +15,14 @@ const Images = {
     LastEnemy: new Image,
 }
 
-Images.Enemy.src = "/images/enemy.png"
-Images.Player.src = "/images/player.png"
-Images.LazerUp.src = "/images/lazer-up.png"
-Images.FireDown.src = "/images/fire-down.png"
-Images.FireRight.src = "/images/fire-right.png"
-Images.FireLeft.src = "/images/fire-left.png"
-Images.Block.src = "/images/block.png"
-Images.LastEnemy.src = "/images/lastEnemy.png"
+assets.Enemy.src = "/assets/enemy.png"
+assets.Player.src = "/assets/player.png"
+assets.LazerUp.src = "/assets/lazer-up.png"
+assets.FireDown.src = "/assets/fire-down.png"
+assets.FireRight.src = "/assets/fire-right.png"
+assets.FireLeft.src = "/assets/fire-left.png"
+assets.Block.src = "/assets/block.png"
+assets.LastEnemy.src = "/assets/lastEnemy.png"
 
 let player = new Player()
 

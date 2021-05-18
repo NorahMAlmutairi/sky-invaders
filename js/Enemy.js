@@ -6,6 +6,6 @@ class Enemy extends Motion {
         this.y = 0;
         this.x = Math.random() * (canvas.width - this.width)
         this.color = '#B44'
-        this.img = Images.Enemy
+        this.img = assets.Enemy
     }
 }
