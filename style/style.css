@@ -1,0 +1,7 @@
+#gameBoard {
+    /* background-color:gray; */
+    background: url("/images/background.png");
+    border: 2px solid black;
+    background-size: 100% 100%;
+}
+
