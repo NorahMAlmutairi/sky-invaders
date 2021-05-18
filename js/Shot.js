@@ -9,7 +9,7 @@ class Shot extends Motion {
         this.width = 50
         this.height = 100
         this.color = "orange"
-        if (direction == "up") this.img = Images.LazerUp
+        if (direction == "up") this.img = assets.LazerUp
         else if (direction == "down") this.img = assets.FireDown
         else if (direction == "right") this.img = assets.FireRight
         else if (direction == "left") this.img = assets.FireLeft
