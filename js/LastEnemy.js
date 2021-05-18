@@ -13,7 +13,7 @@ class LastEnemy extends Motion {
     }
 
     move(magnitude = 20) {
-        // Randomly change the direction (Chance of changing direction is %1)
+        // Randomly change the direction 
         if (Math.round(Math.random() * 100) == 50)
             this.direction = LastEnemy.directions[Math.round(Math.random() * 3)]
 
