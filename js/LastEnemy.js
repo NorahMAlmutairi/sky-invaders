@@ -7,7 +7,7 @@ class LastEnemy extends Motion {
         this.width = 130
         this.height = 100
         this.color = "white"
-        this.img = Images.LastEnemy
+        this.img = assets.LastEnemy
         this.health = 20
         this.direction = LastEnemy.directions[0]
     }

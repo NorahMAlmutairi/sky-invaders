@@ -74,16 +74,32 @@ function draw(shape) {
         context.drawImage(shape.img, shape.x, shape.y, shape.width, shape.height);
     context.fill();
 }
+let playerDirection = ""
 
 document.addEventListener("keydown", e => {
     if (e.keyCode == 37) {// left
-        player.move("left", 50)
+        playerDirection = "left"
     } else if (e.keyCode == 39) { // right
-        player.move("right", 50)
-    } else if (e.keyCode == 13) {// enter
+
+        playerDirection = "right"
+    } else if (e.keyCode == 13 || e.keyCode == 32) {// enter or space
         shots.push(player.shoot())
     }
 })
+document.addEventListener("keyup", e => {
+    playerDirection = ""
+
+})
+
+let playerMover = setInterval(() => {
+
+
+    if (playerDirection == "left")
+        player.move("left", 5)
+    else if (playerDirection == "right")
+        player.move("right", 5)
+
+}, 10)
 
 let shotsMover = setInterval(() => {
     for (let i = 0; i < shots.length; i++) {
